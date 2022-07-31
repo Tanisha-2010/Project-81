@@ -1,31 +1,38 @@
-canvas = document.getElementById("myCanvas");
-ctx = canvas.getContext("2d");
+ var canvas = document.getElementById("myCanvas");
+ ctx = canvas.getContext("2d");
 
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineWidth = 1;
-ctx.rect(150, 143, 430, 200);
-ctx.stroke();
+ ctx.beginPath();
+ ctx.strokeStyle = "grey";
+ ctx.lineWidth = 5;
+ ctx.rect(150, 143, 430, 300);
+ ctx.stroke();
 
-canvas.addEventLister("mousedown", my_mouse_down);
+ ctx.beginPath();
+ ctx.strokeStyle = "blue";
+ ctx.lineWidth = 3;
+ ctx.arc(250, 210, 40, 0, 2 * Math.PI);
+ ctx.stroke();
 
-function my_mouse_down(e) {
-    mouseX = e.clientX - canvas.offsetLeft;
-    mouseY = e.clientY - canvas.offsetTop;
-    console.log("clientX=" + e.clientX + "clientY=" + e.clientY);
-    console.log("offsetX=" + canvas.offsetLeft + "offsetY=" + canvas.offsetTop);
-    console.log("mouseX=" + mouseX + "mouseY=" + mouseY);
+ ctx.beginPath();
+ ctx.strokeStyle = "black";
+ ctx.lineWidth = 3;
+ ctx.arc(350, 210, 40, 0, 2 * Math.PI);
+ ctx.stroke();
 
-    circle(mouseX, mouseY);
-}
+ ctx.beginPath();
+ ctx.strokeStyle = "red";
+ ctx.lineWidth = 3;
+ ctx.arc(450, 210, 40, 0, 2 * Math.PI);
+ ctx.stroke();
 
-function circle(mouseX, mouseY) {
-    ctx.beginPath();
-    ctx.strokeStyle = "blue";
-    ctx.lineWidth = 5;
-    ctx.arc(250, 210, 40, 0, 2 * Math.PI);
-}
+ ctx.beginPath();
+ ctx.strokeStyle = "yellow";
+ ctx.lineWidth = 3;
+ ctx.arc(300, 260, 40, 0, 2 * Math.PI);
+ ctx.stroke();
 
-function clear_canvas() {
-    ctx.clearRect(0, 0, 800, 600);
-}
+ ctx.beginPath();
+ ctx.strokeStyle = "green";
+ ctx.lineWidth = 3;
+ ctx.arc(400, 260, 40, 0, 2 * Math.PI);
+ ctx.stroke();
